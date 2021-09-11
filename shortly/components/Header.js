@@ -2,17 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 function Header() {
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white  px-5 py-5 md:px-10">
+    <div className="flex items-center px-10 py-2 mx-5">
       {/* logo */}
-      <div className="relative flex items-center h-10 cursor-pointer my-auto ">
-        <Image
-          src="/logo.svg"
-          layout="fill"
-          objectFit="contain"
-          objectPosition="left"
-        />
+      <div className="mt-2 items-center  ">
+        <Image src="/logo.svg" width={150} height={40} objectFit="contain" />
       </div>
-      <div className="text-gray-500 flex items-center justify-between">
+      <div className="hidden lg:flex text-gray-400 flex items-center justify-start space-x-4 font-poppins pl-8 flex-grow">
         <Link href="/">
           <a>Features</a>
         </Link>
@@ -24,8 +19,19 @@ function Header() {
           <a> Resources</a>
         </Link>
       </div>
-      
-    </header>
+      <div className="flex align-items justify-end">
+        <div>
+          <button className=" text-gray-500  px-10 py-4  font-poppins my-3 hover:shadow-xl hover:rounded-full active:scale-90 transition duration-150">
+            Login
+          </button>
+        </div>
+        <div>
+          <button className=" text-white bg-shortly_cyan px-10 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 
