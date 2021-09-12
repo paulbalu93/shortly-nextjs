@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        "shorten-desktop": "url('/bg-shorten-desktop.svg')",
+        "boost-desktop": "url('/bg-boost-desktop.svg')",
+      },
       fontFamily: {
         poppins: "'Poppins', sans-serif",
       },
@@ -13,8 +17,8 @@ module.exports = {
           DEFAULT: "#2acfcf",
         },
         dark_violet: {
-          light: "#232F3E",
-          DEFAULT: "#	#3b3054",
+          light: "#3A3053",
+          DEFAULT: "#3b3054",
         },
         shortly_red: {
           light: "#232F3E",
