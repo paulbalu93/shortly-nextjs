@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 function Header() {
   return (
-    <div className="flex items-center px-10 py-2 mx-5">
+    <div className="flex items-center px-10 py-2 mx-5 ml-10">
       {/* logo */}
       <div className="mt-2 items-center  ">
         <Image src="/logo.svg" width={150} height={40} objectFit="contain" />
       </div>
-      <div className="hidden lg:flex text-gray-400 flex items-center justify-start space-x-4 font-poppins pl-8 flex-grow">
+      <div className="hidden lg:flex text-gray-400  items-center justify-start space-x-8 font-poppins pl-12 flex-grow">
         <Link href="/">
           <a>Features</a>
         </Link>
