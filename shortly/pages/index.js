@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
+import CallToAction from "../components/CallToAction";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className=" overflow-x-hidden  mt-10">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -23,6 +25,10 @@ export default function Home() {
 
       <Header />
       <Banner />
+      <CallToAction />
+      <footer>
+        <Footer />
+      </footer>
       {/* <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center"></main> */}
 
       {/* <footer className="">
