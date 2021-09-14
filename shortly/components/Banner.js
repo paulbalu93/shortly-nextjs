@@ -3,16 +3,16 @@ import Features from "../components/Features";
 function Banner() {
   return (
     <div className="">
-      <div className="flex items-center pl-10 ml-10 xl:mt-20 relative">
+      <div className="flex items-center pl-9 ml-24 xl:mt-20  relative">
         <div className="flex-col ">
           <div className=" py-20 ">
-            <h1 className=" md:text-6xl xl:text-8xl font-poppins font-bold leading-normal">
-              More than just <br />
-              shorter links
-            </h1>
-            <div className=" md:text-base xl:text-3xl font-poppins text-gray-400 leading-relaxed">
+            <div className=" md:text-6xl xl:text-8xl font-poppins font-bold ">
+              <h1> More than just </h1>
+              <h1 className="mt-2"> shorter links </h1>
+            </div>
+            <div className=" md:text-base xl:text-3xl font-poppins text-gray-400 leading-relaxed mt-4">
               <p> Build your brand's recognition and get detailed</p>
-              <p> insights on how your links are performing </p>
+              <p className="mt-2"> insights on how your links are performing</p>
             </div>
             <div className="my-5">
               <button className=" text-white text-xl bg-shortly_cyan px-14 py-5 shadow-md rounded-full font-bold my-6 hover:shadow-xl active:scale-90 transition duration-150">
