@@ -22,12 +22,12 @@ function Features() {
           </div>
         </div>
         {/* Feature details section */}
-        <div className="pb-10 mx-28">
+        <div className="pb-36 mx-64">
           {/* container of 3 feature columns */}
           <div className="flex align-items ml-10">
             {/* first column */}
             <div className="bg-white shadow-sm rounded-lg relative w-[398px] h-[304px] ">
-              <div className="absolute -top-14 rounded-full bg-dark_violet-light h-24 w-24 ">
+              <div className="absolute -top-14 left-8 rounded-full bg-dark_violet-light h-24 w-24 ">
                 <div className="p-7">
                   <Image
                     src="/icon-brand-recognition.svg"
@@ -37,11 +37,67 @@ function Features() {
                   />
                 </div>
               </div>
+              <h1 className="text-2xl font-bold font-poppins mt-20 ml-8">
+                Brand Recognition
+              </h1>
+              <div className="pt-6 text-lg font-poppins text-gray-500 ml-8">
+                <p> Boost your brand recognition with</p>
+                <p> each click. Generic links don't mean a </p>
+                <p> thing. Branded links help instil</p>
+                <p> confidence in your content</p>
+              </div>
+            </div>
+            {/* line */}
+            <div className="my-36 ">
+              <div className="bg-shortly_cyan py-1 px-4 mt-6"></div>
             </div>
             {/* second column */}
-            <div className="bg-white shadow-sm rounded-lg relative w-[398px] h-[304px] "></div>
+            <div className="bg-white shadow-sm rounded-lg relative w-[398px] h-[304px] mt-12 ">
+              <div className="absolute -top-14 left-8 rounded-full bg-dark_violet-light h-24 w-24">
+                <div className="p-7">
+                  <Image
+                    src="/icon-detailed-records.svg"
+                    width="40"
+                    height="40"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+              <h1 className="text-2xl font-bold font-poppins pt-12 mt-8 ml-8 ">
+                Detailed Records
+              </h1>
+              <div className="pt-5 text-lg font-poppins text-gray-500 ml-8 ">
+                <p> Gain insights into who is clicking your</p>
+                <p>links. Knowing when and where</p>
+                <p> people engage with your content</p>
+                <p> helps inform better decisions</p>
+              </div>
+            </div>
+            <div className=" my-36">
+              <div className="bg-shortly_cyan py-1 px-4 mt-6"></div>
+            </div>
             {/* third column */}
-            <div className="bg-white shadow-sm rounded-lg relative w-[398px] h-[304px] "></div>
+            <div className="bg-white shadow-sm rounded-lg relative w-[398px] h-[304px] mt-24">
+              <div className="absolute -top-14 left-8 rounded-full bg-dark_violet-light h-24 w-24 ">
+                <div className="p-7">
+                  <Image
+                    src="/icon-fully-customizable.svg"
+                    width="40"
+                    height="40"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+              <h1 className="text-2xl font-bold font-poppins  pt-12 mt-8 ml-8 ">
+                Fully Customizable
+              </h1>
+              <div className="pt-5 text-lg font-poppins text-gray-500 ml-8">
+                <p> Improve brand awareness and</p>
+                <p>content discoverability through</p>
+                <p>customizable lnks, supercharging</p>
+                <p>audience engagement</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
