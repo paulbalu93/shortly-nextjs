@@ -1,35 +1,42 @@
 import Image from "next/image";
+import scode from "shrtco.de";
 // import Axios from "axios";
 import { useState } from "react";
 function Features() {
   const [inputLink, setInputLink] = useState("");
+  const [res, setRes] = useState("");
   console.log(inputLink);
   const handleLinkSubmit = async () => {
-    const response = await fetch(`https://api.shrtco.de/v2/shorten`, {
-      method: "POST",
-      body: JSON.stringify(inputLink),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await response.json();
-    console.log(data);
-    // const response = await fetch("https://api.shrtco.de/v2/shorten", {
-    //   method: "POST",
-    //   body: JSON.stringify(url),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-    // const data = await response.json();
-    // console.log(data);
-    // // const { data } = await Axios.post(
-    // //   `https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten`,
-    // //   {
-    // //     url: url,
-    // //   }
-    // // );
+    const response = await scode.short({ url: inputLink });
+    setRes(response);
+    console.log(response);
   };
+  // const handleLinkSubmit = async () => {
+  //   const response = await fetch(`https://api.shrtco.de/v2/shorten`, {
+  //     method: "POST",
+  //     body: JSON.stringify(inputLink),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  //   const data = await response.json();
+  //   console.log(data);
+  //   // const response = await fetch("https://api.shrtco.de/v2/shorten", {
+  //   //   method: "POST",
+  //   //   body: JSON.stringify(url),
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // });
+  // const data = await response.json();
+  // console.log(data);
+  // // const { data } = await Axios.post(
+  // //   `https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten`,
+  // //   {
+  // //     url: url,
+  // //   }
+  // // );
+
   return (
     <div className="mt-40 relative">
       <div className="p-2"></div>
@@ -156,7 +163,30 @@ function Features() {
             </button>
           </div>
         </div>
-        {inputLink && <div className=""> </div>}
+        {inputLink && (
+          <div className="bg-white rounded-sm flex items-center ">
+            <div className="px-20 pr-40  ">
+              <p> {inputLink}</p>
+            </div>
+            <div className="flex justify-end ml-60 pl-80">
+              {res && (
+                <p className="mt-4 text-shortly_cyan">
+                  {" "}
+                  {res.result.full_short_link}
+                </p>
+              )}
+
+              <div>
+                <button className=" ml-60 text-white text-xs py-2 bg-shortly_cyan px-5 mr-16 shadow-md rounded-lg font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150">
+                  Copy
+                </button>
+              </div>
+            </div>
+
+            <div></div>
+            <div></div>
+          </div>
+        )}
       </div>
     </div>
   );
