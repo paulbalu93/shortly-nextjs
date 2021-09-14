@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 function Header() {
   return (
-    <div className="flex items-center px-10 py-2 mx-5 ml-10">
+    <div className="flex items-center px-5 py-2 mx-28 ">
       {/* logo */}
       <div className="mt-2 items-center  ">
         <Image src="/logo.svg" width={150} height={40} objectFit="contain" />
