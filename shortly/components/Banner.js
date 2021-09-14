@@ -3,8 +3,8 @@ import Features from "../components/Features";
 function Banner() {
   return (
     <div className="">
-      <div className="flex items-center pl-10 ml-10 xl:mt-20">
-        <div className="flex-col relative">
+      <div className="flex items-center pl-10 ml-10 xl:mt-20 relative">
+        <div className="flex-col ">
           <div className=" py-20 ">
             <h1 className=" md:text-6xl xl:text-8xl font-poppins font-bold leading-normal">
               More than just <br />
@@ -21,7 +21,7 @@ function Banner() {
             </div>
           </div>
         </div>
-        <div className="absolute -right-24 pt-2 overflow-hidden">
+        <div className="absolute -right-44 pt-2 overflow-hidden">
           <Image
             width="950"
             height="950"
