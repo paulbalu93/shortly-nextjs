@@ -19,7 +19,7 @@ function Header() {
           <a> Resources</a>
         </Link>
       </div>
-      <div className="flex align-items justify-end">
+      <div className="flex items-center justify-end">
         <div>
           <button className=" text-gray-500  px-10 py-4  font-poppins my-3 hover:shadow-xl hover:rounded-full active:scale-90 transition duration-150">
             Login
