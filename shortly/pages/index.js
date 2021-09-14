@@ -4,11 +4,11 @@ import CallToAction from "../components/CallToAction";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Home({ shortenLink, shortenLinkInfo }) {
   return (
     <div className=" overflow-x-hidden  mt-10">
       <Head>
-        <title>Create Next App</title>
+        <title>Shortly</title>
         <link rel="icon" href="/favicon.ico" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,4 +44,16 @@ export default function Home() {
       </footer> */}
     </div>
   );
+}
+export async function getStaticProps() {
+  const shortenLink = await fetch("https://api.shrtco.de/v2/shorten").then(
+    (res) => res.json()
+  );
+
+  const shortenLinkInfo = await fetch("https://api.shrtco.de/v2/info").then(
+    (res) => res.json()
+  );
+  return {
+    props: { shortenLink, shortenLinkInfo },
+  };
 }

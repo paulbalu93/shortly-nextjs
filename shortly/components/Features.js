@@ -1,5 +1,35 @@
 import Image from "next/image";
+// import Axios from "axios";
+import { useState } from "react";
 function Features() {
+  const [inputLink, setInputLink] = useState("");
+  console.log(inputLink);
+  const handleLinkSubmit = async () => {
+    const response = await fetch(`https://api.shrtco.de/v2/shorten`, {
+      method: "POST",
+      body: JSON.stringify(inputLink),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+    // const response = await fetch("https://api.shrtco.de/v2/shorten", {
+    //   method: "POST",
+    //   body: JSON.stringify(url),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+    // const data = await response.json();
+    // console.log(data);
+    // // const { data } = await Axios.post(
+    // //   `https://cors-anywhere.herokuapp.com/https://api.shrtco.de/v2/shorten`,
+    // //   {
+    // //     url: url,
+    // //   }
+    // // );
+  };
   return (
     <div className="mt-40 relative">
       <div className="p-2"></div>
@@ -104,11 +134,11 @@ function Features() {
       <div className="absolute top-0 left-36  right-36 bg-shorten-desktop  rounded-lg bg-center bg-cover bg-dark_violet-light  z-50 ">
         <div className="flex items-center justify-center p-6 pl-12  py-10 ">
           {/* input box */}
-          <div className="flex items-center bg-white rounded-lg py-4 px-12 md:shadow-sm m-5 p flex-grow hover:ring-2 hover:ring-red-500 ">
+
+          <div className="flex items-center bg-white rounded-lg py-4 px-12 md:shadow-sm m-5 p flex-grow hover:ring-2 hover:ring-red-500 active:placeholder-red-500 ">
             <input
-              // value={searchInput}
               onChange={(e) => {
-                setSearchInput(e.target.value);
+                setInputLink(e.target.value);
               }}
               type="text"
               placeholder="Shorten a link here..."
@@ -118,11 +148,15 @@ function Features() {
           </div>
 
           <div className="flex items-center">
-            <button className=" text-white text-2xl py-6 bg-shortly_cyan px-16 mr-16 shadow-md rounded-lg font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150">
+            <button
+              className=" text-white text-2xl py-6 bg-shortly_cyan px-16 mr-16 shadow-md rounded-lg font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150"
+              onClick={handleLinkSubmit}
+            >
               Shorten it
             </button>
           </div>
         </div>
+        {inputLink && <div className=""> </div>}
       </div>
     </div>
   );

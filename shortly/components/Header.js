@@ -19,14 +19,14 @@ function Header() {
           <a> Resources</a>
         </Link>
       </div>
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-end z-50 ">
         <div>
-          <button className=" text-gray-500  px-10 py-4  font-poppins my-3 hover:shadow-xl hover:rounded-full active:scale-90 transition duration-150">
+          <button className=" text-gray-500  px-10 py-4  font-poppins my-3 hover:shadow-xl hover:rounded-full active:scale-90 transition duration-150 cursor-pointer">
             Login
           </button>
         </div>
         <div>
-          <button className=" text-white bg-shortly_cyan px-10 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150">
+          <button className=" text-white cursor-pointer bg-shortly_cyan px-10 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150">
             Sign Up
           </button>
         </div>
