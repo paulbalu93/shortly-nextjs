@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 export default function Home({ shortenLink, shortenLinkInfo }) {
   return (
-    <div className=" overflow-x-hidden  mt-10">
+    <div className=" overflow-x-hidden  lg:mt-10 mt-2">
       <Head>
         <title>Shortly</title>
         <link rel="icon" href="/favicon.ico" />
