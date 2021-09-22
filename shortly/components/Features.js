@@ -194,10 +194,9 @@ function Features() {
             <div className="px-20 pr-40  ">
               <p> {inputLink}</p>
             </div>
-            <div className="flex justify-end ml-60 pl-80">
+            <div className="flex justify-end ml-40 pl-72">
               {res && (
                 <p className="mt-4 text-shortly_cyan">
-                  {" "}
                   {res.result.full_short_link}
                 </p>
               )}
